@@ -1,30 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <!-- <Calc/> -->
-    <input type="text" v-model.number="num">
-    <counter-group :counterNum="num"></counter-group>
+   <calc></calc>
   </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import CounterGroup from './components/CounterGroup.vue'
-import Calc from './components/calc'
+import calc from './components/calc.vue'
 
 export default {
   name: 'app',
   components: {
-    // Calc
-    HelloWorld,
-    CounterGroup
+     calc
   },
-  data: function() {
-    return {
-      num: 0
-    }
-  }
 }
 </script>
 
@@ -38,3 +26,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+

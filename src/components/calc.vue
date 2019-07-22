@@ -1,30 +1,25 @@
 <template>
- <div>
-     <div>
+ <div id="calc">
          <button @click="increate">+</button>
-         <input type="text" v-model="number">
+          {{$store.state.count}}
          <button @click="decrease">-</button>
-     </div>
+
  </div>
 </template>
 
 <script>
+import { mapGetters,mapActions} from 'vuex'
     export default {
-        data() {
-            return {
-                number: 0
-            }
-        },
+        computed: mapGetters([
+        ]),
+    
+    
         methods: {
-            increate: function() {
-                this.number++;
-                this.$emit("addToAll", 1)
-            },
-            decrease: function() {
-                this.number--;
-                this.$emit("decreaseToAll", 1)
-            }
-        }
+            ...mapActions ([
+            'increate',
+            'decrease'
+            ]) 
+        } 
     }
 </script>
 
