@@ -18,11 +18,11 @@
         methods: {
             increate: function() {
                 this.number++;
-                this.$emit("addToParent", 1)
+                this.$emit("addToAll", 1)
             },
             decrease: function() {
                 this.number--;
-                this.$emit("decreaseToParent", 1)
+                this.$emit("decreaseToAll", 1)
             }
         }
     }
